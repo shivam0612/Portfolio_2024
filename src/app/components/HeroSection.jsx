@@ -19,8 +19,7 @@ const HeroSection = () => {
             <span
               className="text-transparent bg-clip-text"
               style={{
-                backgroundImage:
-                "linear-gradient(to right, #F7E77D, #FF9D9D )",
+                backgroundImage: "linear-gradient(to right, #F7E77D, #FF9D9D )",
               }}
             >
               Hello, I&apos;m{" "}
@@ -50,18 +49,16 @@ const HeroSection = () => {
             <Link
               href="/#contact"
               style={{
-                backgroundImage:
-                "linear-gradient(to right, #F7E77D, #FF9D9D )",
+                backgroundImage: "linear-gradient(to right, #F7E77D, #FF9D9D )",
               }}
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4  hover:bg-slate-200 text-black"
             >
               Hire Me
             </Link>
             <Link
-              href="/"
+              href="https://drive.google.com/uc?export=download&id=1L7AJbL-g_nJdgY3WfPR9ZG6yPXjsn7CA"
               style={{
-                backgroundImage:
-                "linear-gradient(to right, #F7E77D, #FF9D9D )",
+                backgroundImage: "linear-gradient(to right, #F7E77D, #FF9D9D )",
               }}
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full  hover:bg-slate-800 text-white mt-3"
             >

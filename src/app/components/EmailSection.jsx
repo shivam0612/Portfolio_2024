@@ -89,7 +89,7 @@ const EmailSection = () => {
                 id="user_email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
+                placeholder="your_email@google.com"
               />
             </div>
             <div className="mb-6">
