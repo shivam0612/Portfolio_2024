@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -6,8 +8,9 @@ const variants = {
   active: { width: "calc(100% - 0.75rem)" },
 };
 
-const TabButton = ({ active, selectTab, children }) => {
+const TabButton = ({ active, selectTab, children, isSubTab }) => {
   const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
+  const activeColor = isSubTab ? "bg-[rgb(247,247,85)]" : "bg-[rgb(168,85,247)]";
 
   return (
     <button onClick={selectTab}>
@@ -17,7 +20,7 @@ const TabButton = ({ active, selectTab, children }) => {
       <motion.div
         animate={active ? "active" : "default"}
         variants={variants}
-        className="h-1 bg-primary-500 mt-2 mr-3"
+        className={`h-1 mt-2 mr-3 ${activeColor}`}
       ></motion.div>
     </button>
   );
