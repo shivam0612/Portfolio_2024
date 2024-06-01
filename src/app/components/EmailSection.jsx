@@ -1,42 +1,46 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import {toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import Image from "next/image";
+import emailjs from "emailjs-com";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const form = useRef();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
+  const sendEmail = (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+    setError(false);
+    setSuccess(false);
 
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
-      // Tell the server we're sending JSON.
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    };
+    const formElement = form.current; // Get the form element
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        formElement,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setSuccess(true);
+          toast.success("Email sent successfully!");
 
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
-    }
+          formElement.reset(); // Reset the form
+        },
+        () => {
+          toast.error("Failed to send email. Please try again.");
+
+          setError(true);
+        }
+      );
   };
 
   return (
@@ -64,24 +68,25 @@ const EmailSection = () => {
           </Link>
         </div>
       </div>
+
       <div>
         {emailSubmitted ? (
           <p className="text-green-500 text-sm mt-2">
             Email sent successfully!
           </p>
         ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+          <form ref={form} className="flex flex-col" onSubmit={sendEmail}>
             <div className="mb-6">
               <label
-                htmlFor="email"
+                htmlFor="user_email"
                 className="text-white block mb-2 text-sm font-medium"
               >
                 Your email
               </label>
               <input
-                name="email"
+                name="user_email"
                 type="email"
-                id="email"
+                id="user_email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="jacob@google.com"
@@ -89,15 +94,15 @@ const EmailSection = () => {
             </div>
             <div className="mb-6">
               <label
-                htmlFor="subject"
+                htmlFor="user_subject"
                 className="text-white block text-sm mb-2 font-medium"
               >
                 Subject
               </label>
               <input
-                name="subject"
+                name="user_subject"
                 type="text"
-                id="subject"
+                id="user_subject"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="Just saying hi"
@@ -105,14 +110,14 @@ const EmailSection = () => {
             </div>
             <div className="mb-6">
               <label
-                htmlFor="message"
+                htmlFor="user_message"
                 className="text-white block text-sm mb-2 font-medium"
               >
                 Message
               </label>
               <textarea
-                name="message"
-                id="message"
+                name="user_message"
+                id="user_message"
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="Let's talk about..."
               />

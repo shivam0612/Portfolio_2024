@@ -57,7 +57,7 @@ const projectsData = [
     image: "/images/projects/6.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "/",    
+    previewUrl: "/",
   },
 ];
 
@@ -90,7 +90,7 @@ const ProjectsSection = () => {
           name="All"
           isSelected={tag === "All"}
         />
-        {/* <ProjectTag
+        <ProjectTag
           onClick={handleTagChange}
           name="Web"
           isSelected={tag === "Web"}
@@ -99,7 +99,7 @@ const ProjectsSection = () => {
           onClick={handleTagChange}
           name="Mobile"
           isSelected={tag === "Mobile"}
-        /> */}
+        />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
