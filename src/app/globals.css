@@ -74,3 +74,9 @@ body {
 .index{
   z-index: 1;
 }
+
+/* Social media color of icons */
+.social-icon-linkedin:hover {
+  filter: invert(20%) sepia(75%) saturate(4932%) hue-rotate(200deg) brightness(94%) contrast(92%);
+  -webkit-filter: invert(20%) sepia(75%) saturate(4932%) hue-rotate(200deg) brightness(94%) contrast(92%);
+}

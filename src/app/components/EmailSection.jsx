@@ -2,7 +2,7 @@
 import React, { useRef, useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
-import {toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -60,11 +60,28 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
-            <Image src={GithubIcon} alt="Github Icon" />
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/shivam0612"
+          >
+            <Image
+              className="social-icon-github" // Add this class
+              src={GithubIcon}
+              alt="Github Icon"
+            />
           </Link>
-          <Link href="linkedin.com">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://linkedin.com/in/shivampatel6/"
+          >
+            <Image
+              style={{}}
+              src={LinkedinIcon}
+              alt="Linkedin Icon"
+              className="social-icon-linkedin" // Add this class
+            />
           </Link>
         </div>
       </div>
