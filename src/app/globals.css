@@ -25,3 +25,47 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* ABOUT PAGE */
+.skills-bullets ul {
+  list-style-type: none;
+  padding-left: 20px; /* Adjust as needed */
+}
+
+.skills-bullets ul li:before {
+  content: "\2022"; /* Bullet character */
+  color: #ffcc00; /* Golden Yellow */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Add this CSS to your stylesheet */
+/* Add this CSS to your stylesheet */
+.animated-hr {
+  position: relative;
+  height: 2px;
+  overflow: hidden;
+  background: none;
+}
+
+.animated-hr::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  /*Twicethewidthtoensurecontinuity*/height: 100%;
+  background: linear-gradient(90deg, #efce96, #A855F7, #34D399);
+  animation: animate-hr 3s linear infinite;
+  -webkit-animation: animate-hr 3s normal infinite;
+}
+
+@keyframes animate-hr {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

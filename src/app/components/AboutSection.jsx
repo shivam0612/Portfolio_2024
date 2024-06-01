@@ -7,53 +7,155 @@ const TAB_DATA = [
   {
     title: "Skills",
     id: "skills",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
-      </ul>
-    ),
+    subTabs: [
+      { title: "Languages", id: "programmingLanguages" },
+      { title: "Web Dev", id: "webDevelopment" },
+      { title: "Databases", id: "databaseFrameworks" },
+      { title: "Cloud", id: "cloudComputing" },
+      { title: "Versioning", id: "versionControl" },
+      { title: "Other", id: "other" },
+    ],
+    content: {
+      programmingLanguages: () => (
+        <ul className="list-disc pl-2">
+          <li>Python</li>
+          <li>Node.js</li>
+          <li>C#</li>
+          <li>Java</li>
+          <li>TypeScript</li>
+          <li>PowerShell</li>
+          <li>JavaScript</li>
+        </ul>
+      ),
+      webDevelopment: () => (
+        <ul className="list-disc pl-2">
+          <li>MERN Stack</li>
+          <li>.NET</li>
+          <li>Bootstrap</li>
+          <li>Agile Development</li>
+          <li>RESTful API</li>
+        </ul>
+      ),
+      databaseFrameworks: () => (
+        <ul className="list-disc pl-2">
+          <li>MS SQL Server</li>
+          <li>MySQL</li>
+          <li>MongoDB Atlas</li>
+          <li>Oracle</li>
+          <li>PL/SQL</li>
+        </ul>
+      ),
+      cloudComputing: () => (
+        <ul className="list-disc pl-2">
+          <li>
+            AWS (S3, Cloud Formation, EC2, CI/CD, Lambda, RDS, DynamoDB, IAM,
+            Kubernetes, Route 53, API Gateway, ALB, EC2)
+          </li>
+          <li>Google Cloud Platform</li>
+        </ul>
+      ),
+      versionControl: () => (
+        <ul className="list-disc pl-2">
+          <li>Git</li>
+          <li>GitHub</li>
+        </ul>
+      ),
+      other: () => (
+        <ul className="list-disc pl-2">
+          <li>Microsoft Office Suite</li>
+          <li>Customer Service</li>
+          <li>Multi-Tasking</li>
+          <li>Troubleshooting</li>
+        </ul>
+      ),
+    },
   },
   {
     title: "Education",
     id: "education",
-    content: (
+    content: () => (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>
+          Lambton College
+          <ul>
+            <li>Years Attended: 2022 - 2023</li>
+            <li>
+              Degree: Post Graduate Degree in Computer Software & Database
+              Development
+            </li>
+          </ul>
+        </li>
+        <hr className="my-1 animated-hr" />
+        <li>
+          Parul University
+          <ul>
+            <li>Years Attended: 2017 - 2020</li>
+            <li>Degree: Bachelor of Computer Science</li>
+          </ul>
+        </li>
+        <hr className="my-1 animated-hr" />
+        <li>
+          Parul University
+          <ul>
+            <li>Years Attended: 2014 - 2017</li>
+            <li>Degree: Diploma in Computer Science</li>
+          </ul>
+        </li>
       </ul>
     ),
   },
   {
     title: "Certifications",
     id: "certifications",
-    content: (
+    content: () => (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>AWS Certified Solution Architect Associate</li>
+        <ul>
+          {" "}
+          <li>Validity: May 2024 - May 2027</li>
+        </ul>
+        <hr className="my-1 animated-hr" />
+        <li>AWS Certified Cloud Practitioner</li>
+        <ul>
+          <li>Validity: March 2024 - March 2027</li>
+        </ul>
       </ul>
     ),
   },
 ];
+
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
+  const [subTab, setSubTab] = useState("programmingLanguages");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
     startTransition(() => {
       setTab(id);
+      if (id === "skills") {
+        setSubTab(TAB_DATA.find((item) => item.id === id)?.subTabs[0].id || "");
+      }
     });
   };
 
+  const handleSubTabChange = (id) => {
+    startTransition(() => {
+      setSubTab(id);
+    });
+  };
 
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} alt="image" />
+        <div className="flex justify-center md:justify-start">
+          <Image
+            src="/images/about-image.png"
+            width={500}
+            height={500}
+            alt="image"
+            className="rounded-lg"
+          />
+        </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col">
           <h2 className="text-4xl font-bold text-white mb-5 mt-10">About Me</h2>
           <p className="text-base lg:text-lg">
@@ -75,11 +177,31 @@ const AboutSection = () => {
               </TabButton>
             ))}
           </div>
+          {tab === "skills" && (
+            <div className="flex flex-row justify-start mt-1">
+              {TAB_DATA.find((item) => item.id === "skills")?.subTabs.map(
+                (subTabItem) => (
+                  <TabButton
+                    key={subTabItem.id}
+                    selectTab={() => handleSubTabChange(subTabItem.id)}
+                    active={subTab === subTabItem.id}
+                  >
+                    {subTabItem.title}
+                  </TabButton>
+                )
+              )}
+            </div>
+          )}
           <div
-            className="mt-8 h-64 overflow-y-auto"
-            style={{ maxHeight: "300px" }}
+            className="mt-2 h-64 overflow-y-auto"
+            style={{ minHeight: "300px" }}
           >
-            {TAB_DATA.find((t) => t.id === tab).content}
+            <ul className="list-disc skills-bullets pl-2">
+              {tab === "skills" &&
+                TAB_DATA.find((t) => t.id === tab)?.content[subTab]()}
+              {tab !== "skills" &&
+                TAB_DATA.find((t) => t.id === tab)?.content()}
+            </ul>
           </div>
         </div>
       </div>

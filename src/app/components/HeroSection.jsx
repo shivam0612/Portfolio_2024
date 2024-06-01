@@ -16,7 +16,13 @@ const HeroSection = () => {
           className="col-span-9 place-self-center text-center sm:text-left justify-self-start"
         >
           <h1 className="text-white mb-4 text-3xl sm:text-4xl lg:text-6xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+            <span
+              className="text-transparent bg-clip-text"
+              style={{
+                backgroundImage:
+                "linear-gradient(to right, #F7E77D, #FF9D9D )",
+              }}
+            >
               Hello, I&apos;m{" "}
             </span>
             <br />
@@ -28,7 +34,7 @@ const HeroSection = () => {
                 1000,
                 "Full Stack Developer",
                 1000,
-                " Stack Developer",
+                "Stack Developer",
                 1000,
               ]}
               wrapper="span"
@@ -43,13 +49,21 @@ const HeroSection = () => {
           <div>
             <Link
               href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
+              style={{
+                backgroundImage:
+                "linear-gradient(to right, #F7E77D, #FF9D9D )",
+              }}
+              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4  hover:bg-slate-200 text-black"
             >
               Hire Me
             </Link>
             <Link
               href="/"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
+              style={{
+                backgroundImage:
+                "linear-gradient(to right, #F7E77D, #FF9D9D )",
+              }}
+              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full  hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
