@@ -2,12 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -79,4 +81,13 @@ body {
 .social-icon-linkedin:hover {
   filter: invert(20%) sepia(75%) saturate(4932%) hue-rotate(200deg) brightness(94%) contrast(92%);
   -webkit-filter: invert(20%) sepia(75%) saturate(4932%) hue-rotate(200deg) brightness(94%) contrast(92%);
+}
+@font-face {
+  font-family: 'YourFontName';
+  src: url('./api/send/fonts/BrettleySignatureRegular-RpEMo.ttf') format('truetype');
+}
+
+.logo-font {
+  font-family: 'YourFontName', sans-serif;
+  font-size: 2rem;
 }
