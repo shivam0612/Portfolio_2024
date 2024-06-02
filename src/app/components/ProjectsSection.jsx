@@ -71,7 +71,7 @@ const projectsData = [
   {
     id: 8,
     title: "Quiz App",
-    description: "Developed a sleep tracking project in Node.js with Handlebars, allowing users to input data and visualize sleep patterns over a period using real-time MongoDB Charts.",
+    description: "Developed a Node.js application with Handlebars for frontend optimization, featuring a sophisticated quiz app with MongoDB database, Bootstrap for responsive design, social media sharing, and a user-friendly dashboard for managing and retaking quizzes.",
     image: "/images/projects/P-QA.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/shivam0612/QuizApp.git",
