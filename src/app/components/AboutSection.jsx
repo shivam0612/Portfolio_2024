@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
@@ -160,12 +159,14 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col">
           <h2 className="text-4xl font-bold text-white mb-5 mt-10">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            A Software Engineer and Cloud Engineer with over three years of
+            experience in leading project teams, performing code reviews,
+            developing testing strategies, and integrating APIs. Highly
+            knowledgeable in AWS cloud services, holding two certifications. I
+            am eager to contribute to innovative projects within a dynamic,
+            security-focused development environment. As a team player, I look
+            forward to collaborating with others to create outstanding
+            applications.
           </p>
           <div className="flex flex-row flex-wrap justify-start mt-8">
             {TAB_DATA.map((tabItem) => (
