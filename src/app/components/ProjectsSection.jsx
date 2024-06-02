@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 3,
     title: "Portfolio Website II",
-    description: "This portfolio project, developed using React.js and Tailwind CSS, showcases a professional profile and integrates EmailJS services. It also includes a feature that allows users to download a CV.",
+    description: "This is a portfolio website built with Next.js and Tailwind CSS. It showcases your skills, projects, and achievements in an elegant and responsive design.",
     image: "/images/projects/P-PFM.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/shivam0612/Portfolio_2024.git",
