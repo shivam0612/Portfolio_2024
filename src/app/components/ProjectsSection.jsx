@@ -62,7 +62,7 @@ const projectsData = [
   {
     id: 7,
     title: "Daily Sleep Tracker",
-    description: "Project 1 description",
+    description: "Developed a sleep tracking project in Node.js with Handlebars, allowing users to input data and visualize sleep patterns over a period using real-time MongoDB Charts.",
     image: "/images/projects/P-DST.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/shivam0612/DailySleepTracker.git",
