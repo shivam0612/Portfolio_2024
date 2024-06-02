@@ -84,6 +84,7 @@ body {
 @font-face {
   font-family: 'YourFontName';
   src: url('/fonts/BrettleySignatureRegular-RpEMo.ttf') format('truetype');
+  font-display: swap;
 }
 
 .logo-font {

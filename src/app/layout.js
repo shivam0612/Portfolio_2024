@@ -11,6 +11,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+      <link rel="preload" href="/fonts/BrettleySignatureRegular-RpEMo.ttf" as="font" type="font/ttf" crossorigin />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
