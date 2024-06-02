@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: "Magic Entertainment Portal",
-    description: "Project 1 description",
+    description: "Employed MERN stack technology with Redis cache for project development, offering diverse services like online board games, personalized music/videos, and ancient artifact exploration,with centralized subscription system, chat functionality, and various APIs for efficient database management.",
     image: "/images/projects/P-ME.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/shivam0612/Magic-Entertainment.git",
@@ -17,7 +17,7 @@ const projectsData = [
   {
     id: 2,
     title: "Portfolio Website I",
-    description: "Project 2 description",
+    description: "Developed a portfolio project in Next.js with Tailwind CSS and Framer Motion for smooth animations and transitions.",
     image: "/images/projects/P-PF.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/shivam0612/my-portfolio.git",
@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 3,
     title: "Portfolio Website II",
-    description: "Project 3 description",
+    description: "This portfolio project, developed using React.js and Tailwind CSS, showcases a professional profile and integrates EmailJS services. It also includes a feature that allows users to download a CV.",
     image: "/images/projects/P-PFM.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/shivam0612/Portfolio_2024.git",
@@ -35,7 +35,7 @@ const projectsData = [
   {
     id: 4,
     title: "Student Management System",
-    description: "Project 4 description",
+    description: "The Student Management System is a comprehensive project developed using cross-platform technologies, combining Asp.net (C#) for web development and Android for mobile applications.",
     image: "/images/projects/P-SMS.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/shivam0612/Student-Management-System.git",
@@ -44,7 +44,7 @@ const projectsData = [
   {
     id: 5,
     title: "Amazona",
-    description: "Authentication and CRUD operations",
+    description: "Developed an Amazona project with MERN Stack, Redux, Bootstrap, PayPal Sandbox for secure payment transactions, replicating dynamic e-commerce functionality.",
     image: "/images/projects/P-Amazona.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/shivam0612/Amazona---Amazon-Clone.git",
@@ -53,7 +53,7 @@ const projectsData = [
   {
     id: 6,
     title: "Lambton College",
-    description: "Project 5 description",
+    description: "An HTML, CSS, and JS-based website offering static information about Lambton College, including details about its mission, career opportunities, contact information, and provided services.",
     image: "/images/projects/P-LC.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/shivam0612/LambtonCollege_Clone.git",
@@ -71,7 +71,7 @@ const projectsData = [
   {
     id: 8,
     title: "Quiz App",
-    description: "Project 2 description",
+    description: "Developed a sleep tracking project in Node.js with Handlebars, allowing users to input data and visualize sleep patterns over a period using real-time MongoDB Charts.",
     image: "/images/projects/P-QA.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/shivam0612/QuizApp.git",
@@ -80,7 +80,7 @@ const projectsData = [
   {
     id: 9,
     title: "Online Word Counter",
-    description: "Project 3 description",
+    description: "The project is focused on creating a word counter application using HTML, CSS, Bootstrap, and JavaScript.",
     image: "/images/projects/P-OWC.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/shivam0612/Online-Word-Counter.git",
@@ -89,7 +89,7 @@ const projectsData = [
   {
     id: 10,
     title: "Image Captioning",
-    description: "Project 4 description",
+    description: "Developed in Python using ML libraries, the project utilizes the VGG16 CNN for feature extraction from both grayscale and colored images, enabling captioning for both types of images.",
     image: "/images/projects/P-IC.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/shivam0612/Image_Captioning.git",
@@ -98,7 +98,7 @@ const projectsData = [
   {
     id: 5,
     title: "Emotion Detection",
-    description: "Authentication and CRUD operations",
+    description: "Used Python with OpenCV, NumPy, scikit-learn, TensorFlow, and Keras to develop an Emotion Detection system, processing a diverse dataset of emotions.",
     image: "/images/projects/P-ED.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/shivam0612/Emotion-Detection.git",
@@ -107,7 +107,7 @@ const projectsData = [
   {
     id: 6,
     title: "Mask Detection",
-    description: "Project 5 description",
+    description: "Developed a Mask Detection system using Python with OpenCV, NumPy, scikit-learn, TensorFlow, and Keras, processing images and classifying them based on the presence of a mask.",
     image: "/images/projects/P-MD.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/shivam0612/Mask-Detection.git",
