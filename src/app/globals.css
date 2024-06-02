@@ -83,7 +83,7 @@ body {
 
 @font-face {
   font-family: 'YourFontName';
-  src: url('./api/send/fonts/BrettleySignatureRegular-RpEMo.ttf') format('truetype');
+  src: url('/fonts/BrettleySignatureRegular-RpEMo.ttf') format('truetype');
 }
 
 .logo-font {
