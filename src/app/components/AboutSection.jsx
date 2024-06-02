@@ -18,13 +18,12 @@ const TAB_DATA = [
     content: {
       programmingLanguages: () => (
         <ul className="list-disc pl-2">
-          <li>Python</li>
+          <li>Python</li> <li>JavaScript</li>
           <li>Node.js</li>
           <li>C#</li>
           <li>Java</li>
           <li>TypeScript</li>
           <li>PowerShell</li>
-          <li>JavaScript</li>
         </ul>
       ),
       webDevelopment: () => (
