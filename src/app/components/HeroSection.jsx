@@ -49,22 +49,21 @@ const HeroSection = () => {
               style={{
                 backgroundImage: "linear-gradient(to right, #F7E77D, #FF9D9D )",
               }}
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4  hover:bg-slate-200 text-black"
+              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 hover:bg-slate-200 text-black"
             >
               Hire Me
             </Link>
             <a
-  href="https://drive.google.com/uc?export=download&id=1L7AJbL-g_nJdgY3WfPR9ZG6yPXjsn7CA"
-  style={{
-    backgroundImage: "linear-gradient(to right, #F7E77D, #FF9D9D )",
-  }}
-  className="px-1 inline-block py-1 w-full sm:w-fit rounded-full  hover:bg-slate-800 text-white mt-3"
->
-  <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-    Download CV
-  </span>
-</a>
-
+              href="https://drive.google.com/uc?export=download&id=1L7AJbL-g_nJdgY3WfPR9ZG6yPXjsn7CA"
+              style={{
+                backgroundImage: "linear-gradient(to right, #F7E77D, #FF9D9D )",
+              }}
+              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full hover:bg-slate-800 text-white mt-3"
+            >
+              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+                Download CV
+              </span>
+            </a>
           </div>
         </motion.div>
         <motion.div
@@ -73,7 +72,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-3 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="animated-border rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
               src="/images/hero-2.png"
               alt="hero image"
@@ -84,6 +83,35 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </div>
+      <style jsx>{`
+        .animated-border {
+          position: relative;
+        }
+        .animated-border::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          border: 4px solid transparent;
+          border-top: 4px solid #AED7F0;
+          border-right: 4px solid #F2B2B2;
+          border-bottom: 4px solid #C3EEC3;
+        border-left: 4px solid #FAFAD2;
+          transform: translate(-50%, -50%);
+          animation: spin 3s linear infinite;
+        }
+        @keyframes spin {
+          0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+          }
+          100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+          }
+        }
+      `}</style>
     </section>
   );
 };
