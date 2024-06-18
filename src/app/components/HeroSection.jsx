@@ -54,7 +54,7 @@ const HeroSection = () => {
               Hire Me
             </Link>
             <a
-              href="https://drive.google.com/uc?export=download&id=1L7AJbL-g_nJdgY3WfPR9ZG6yPXjsn7CA"
+              href="https://drive.google.com/uc?export=download&id=1kVHNtXsPjf-hxXgBFTbbPa7utVUUCGjp"
               style={{
                 backgroundImage: "linear-gradient(to right, #F7E77D, #FF9D9D )",
               }}
