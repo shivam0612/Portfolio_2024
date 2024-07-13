@@ -33,6 +33,8 @@ const HeroSection = () => {
                 1000,
                 "Full Stack Developer",
                 1000,
+                "Document Specialist",
+                1000,
               ]}
               wrapper="span"
               speed={50}
@@ -87,6 +89,7 @@ const HeroSection = () => {
         .animated-border {
           position: relative;
         }
+        
         .animated-border::before {
           content: "";
           position: absolute;
@@ -99,10 +102,12 @@ const HeroSection = () => {
           border-top: 4px solid #AED7F0;
           border-right: 4px solid #F2B2B2;
           border-bottom: 4px solid #C3EEC3;
-        border-left: 4px solid #FAFAD2;
+          border-left: 4px solid #FAFAD2;
           transform: translate(-50%, -50%);
           animation: spin 3s linear infinite;
+          background-color: #181818; /* Match the background color */
         }
+        
         @keyframes spin {
           0% {
             transform: translate(-50%, -50%) rotate(0deg);
