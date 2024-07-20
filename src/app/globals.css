@@ -57,7 +57,7 @@ body {
   width: 200%;
   /* Twice the width to ensure continuity */
   height: 100%;
-  background: linear-gradient(90deg, #efce96, #A855F7, #34D399);
+  background: linear-gradient(90deg, #efce96, #A855F7,  rgb(255, 106, 0));
   animation: animate-hr 3s linear infinite;
   -webkit-animation: animate-hr 3s normal infinite;
 }

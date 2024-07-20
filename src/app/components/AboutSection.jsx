@@ -2,6 +2,7 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import { ToastContainer, toast } from "react-toastify";
 
 const TAB_DATA = [
   {
@@ -118,6 +119,190 @@ const TAB_DATA = [
         <ul>
           <li>Validity: March 2024 - March 2027</li>
         </ul>
+      </ul>
+    ),
+  },
+  {
+    title: "Experience",
+    id: "experience",
+    content: () => (
+      <ul className="list-disc pl-2">
+        <div
+          className="hover:bg-gray-700 cursor-pointer rounded-md p-2"
+          style={{ width: "100%" }}
+          onClick={() => {
+            const description = `
+      <strong>Description:</strong><br/>
+      • Ensured the quality of work and products, adhering to good manufacturing practices, and securely and accurately fulfilling customer orders.<br/>
+      • Developed and enhanced time management skills.<br/>
+      • Prioritized assignments based on requirements to achieve exceptional performance.<br/>
+      • Learned to deliver the best products to customers safely and efficiently.<br/>
+      • Achieved high levels of customer satisfaction through accurate and timely order fulfillment.<br/>
+      • Contributed to a positive and efficient work environment through effective communication and teamwork.<br/>
+      • Utilized proper techniques and knowledge of fall arrest systems.<br/>
+      • Operated various equipment, including replenishment/central rider pallet jacks and cherry pickers.<br/>
+    `;
+
+            toast.info(
+              <div dangerouslySetInnerHTML={{ __html: description }} />
+            );
+          }}
+        >
+          <li className="text-lg font-normal ">
+            <b>Case Selector | Cherry Picker | Replenishment</b>
+          </li>
+          <h6 className="text-sm font-normal">
+            Matrix Logistics Services Limited · Permanent Full-time{" "}
+          </h6>
+          <h6 className="text-sm font-normal">Aug 2022 - Present · 2 yrs</h6>
+          <h6 className="text-sm font-normal">
+            Mississauga, Ontario, Canada · On-site
+          </h6>
+        </div>
+        <hr className="my-1 animated-hr" />
+
+        <div
+          className="hover:bg-gray-700 cursor-pointer rounded-md p-2"
+          style={{ width: "100%" }}
+          onClick={() => {
+            const description = `
+      <strong>Description:</strong><br/>
+      • Engaged proactively with customers, customizing offers with great attention to their needs.<br/>
+• Exceeded monthly sales goals, ensuring high customer satisfaction.<br/>
+• Utilized MS Office, Google Docs, and Salesforce to maintain customer and sales records.<br/>
+• Implemented up-selling and cross-selling strategies, resulting in an 80% sales increase within four weeks.<br/>
+• Monitored and reported customer feedback and market shifts.<br/>
+• Utilized outsourcing expertise to effectively contact customers for ordering, provide detailed information about services, and resolve queries.<br/>
+    `;
+
+            toast.info(
+              <div dangerouslySetInnerHTML={{ __html: description }} />
+            );
+          }}
+        >
+          <li className="text-lg font-normal ">
+            <b>Sales Associate</b>
+          </li>
+          <h6 className="text-sm font-normal">Bell · On-Call </h6>
+          <h6 className="text-sm font-normal">
+            Feb 2022 - Jun 2024 · 2 yrs 5 mos
+          </h6>
+          <h6 className="text-sm font-normal">
+            Brampton, Ontario, Canada · Hybrid{" "}
+          </h6>
+        </div>
+        <hr className="my-1 animated-hr" />
+
+        <div
+          className="hover:bg-gray-700 cursor-pointer rounded-md p-2"
+          style={{ width: "100%" }}
+          onClick={() => {
+            const description = `
+      <strong>Description:</strong><br/>
+      • Led a team of 5 developers to align project deliverables with best practices and successfully completed all projects on schedule.<br/>
+• Developed and implemented a project using the MERN Stack, reducing page load times by 40% and increasing user engagement by 25%.<br/>
+• Conducted over 45 code reviews, implemented testing strategies, and integrated 6-7 third-party APIs, enhancing code quality.<br/>
+• Implemented unit testing, increasing code coverage to 85% and managed version control using tools like Git and Github.<br/>
+    `;
+
+            toast.info(
+              <div dangerouslySetInnerHTML={{ __html: description }} />
+            );
+          }}
+        >
+          <li className="text-lg font-normal ">
+            <b>Software Engineer</b>
+          </li>
+          <h6 className="text-sm font-normal">Lambton College · Internship </h6>
+          <h6 className="text-sm font-normal">May 2023 - Aug 2023 · 4 mos</h6>
+          <h6 className="text-sm font-normal">
+            Mississauga, Ontario, Canada · Hybrid
+          </h6>
+        </div>
+        <hr className="my-1 animated-hr" />
+
+        <div
+          className="hover:bg-gray-700 cursor-pointer rounded-md p-2"
+          style={{ width: "100%" }}
+          onClick={() => {
+            const description = `
+      <strong>Description:</strong><br/>
+      • Leveraged the MERN Stack to create and maintain dynamic websites, using HTML, CSS, JavaScript, Git, and Agile Methodologies.<br/>
+• Led back-end development using Node.js and MongoDB, ensuring cross-browser compatibility and performance optimization.<br/>
+• Integrated third-party APIs to enhance website capabilities and user experience.<br/>
+• Collaborated with the team to address challenges and ensure project completion, resulting in a 15% increase in overall team productivity.<br/>
+• Actively participated in 20 team meetings per quarter, contributing to project planning and execution.<br/>
+    `;
+
+            toast.info(
+              <div dangerouslySetInnerHTML={{ __html: description }} />
+            );
+          }}
+        >
+          <li className="text-lg font-normal ">
+            <b>Full Stack Developer</b>
+          </li>
+          <h6 className="text-sm font-normal">
+            Digital Web Weaver · Permanent Full-time{" "}
+          </h6>
+          <h6 className="text-sm font-normal">
+            Jul 2020 - Nov 2021 · 1 yr 5 mos
+          </h6>
+          <h6 className="text-sm font-normal">
+            Vadodara, Gujarat, India · Hybrid
+          </h6>
+        </div>
+        <hr className="my-1 animated-hr" />
+
+        <div
+          className="hover:bg-gray-700 cursor-pointer rounded-md p-2"
+          style={{ width: "100%" }}
+          onClick={() => {
+            const description = `
+      <strong>Description:</strong><br/>
+      • Utilized HTML, CSS, JavaScript, Bootstrap, DOM Events, and SASS during a web development internship, contributing to the successful completion of 3 client projects.<br/>
+• Implemented ReactJS, NodeJS, Redux, and NoSQL (MongoDB) along with Restful API to design and develop a website.<br/>
+• Analyzed sleep patterns using MongoDB Atlas, leading to the development of a data visualization dashboard that improved data interpretation by 25%.<br/>
+    `;
+
+            toast.info(
+              <div dangerouslySetInnerHTML={{ __html: description }} />
+            );
+          }}
+        >
+          <li className="text-lg font-normal ">
+            <b>Web Development Intern</b>
+          </li>
+          <h6 className="text-sm font-normal">Verzeo · Internship </h6>
+          <h6 className="text-sm font-normal">Mar 2021 - Aug 2021 · 6 mos</h6>
+          <h6 className="text-sm font-normal">Vadodara, Gujarat, India </h6>
+        </div>
+        <hr className="my-1 animated-hr" />
+
+        <div
+          className="hover:bg-gray-700 cursor-pointer rounded-md p-2"
+          style={{ width: "100%" }}
+          onClick={() => {
+            const description = `
+      <strong>Description:</strong><br/>
+      • Executed 3 projects in Artificial Intelligence and Machine Learning, specializing in Artificial Neural Networks (ANN) and Convolutional Neural Networks (CNN).<br/>
+• Improved model accuracy by an average of 15% through extensive feature engineering, hyperparameter tuning, and validation techniques across various algorithms.<br/>
+• Developed a Python-based mask detection system with an accuracy of 90% and an image captioning project, utilizing transfer learning and data augmentation.<br/>
+• Created a project capable of recognizing five distinct human emotions with an accuracy of 80%, employing ensemble learning techniques and cross-validation for improved accuracy and generalization.<br/>
+    `;
+
+            toast.info(
+              <div dangerouslySetInnerHTML={{ __html: description }} />
+            );
+          }}
+        >
+          <li className="text-lg font-normal ">
+            <b>Artificial Intelligence Intern</b>
+          </li>
+          <h6 className="text-sm font-normal">Verzeo · Internship </h6>
+          <h6 className="text-sm font-normal">Oct 2020 - Dec 2020 · 3 mos</h6>
+          <h6 className="text-sm font-normal">Vadodara, Gujarat, India </h6>
+        </div>
       </ul>
     ),
   },
