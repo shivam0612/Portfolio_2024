@@ -107,28 +107,30 @@ const TAB_DATA = [
   {
     title: "Certifications",
     id: "certifications",
-    content: () => (
+    content: ({ onHover }) => (
       <ul className="list-disc pl-2">
         <li
-          className="hover:bg-gray-700 cursor-pointer rounded-md p-2"
+          className="hover:bg-gray-700 cursor-pointer rounded-md p-2 relative"
           style={{ width: "100%" }}
+          onMouseEnter={() => onHover("/images/AWS_SAA_certificate.png")}
+          onMouseLeave={() => onHover(null)}
         >
           AWS Certified Solution Architect Associate
-          {" "}
           <h6 className="text-sm font-normal">Amazon Web Services · May 2024 - May 2027</h6>
         </li>
         <hr className="my-1 animated-hr" />
         <li
-          className="hover:bg-gray-700 cursor-pointer rounded-md p-2"
+          className="hover:bg-gray-700 cursor-pointer rounded-md p-2 relative"
           style={{ width: "100%" }}
+          onMouseEnter={() => onHover("/images/AWS_CFL_certificate.png")}
+          onMouseLeave={() => onHover(null)}
         >
           AWS Certified Cloud Practitioner
           <h6 className="text-sm font-normal">Amazon Web Services · March 2024 - March 2027</h6>
-
         </li>
       </ul>
     ),
-  },
+  },  
   {
     title: "Experience",
     id: "experience",
@@ -315,10 +317,12 @@ const TAB_DATA = [
   },
 ];
 
+
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
   const [subTab, setSubTab] = useState("programmingLanguages");
   const [isPending, startTransition] = useTransition();
+  const [hoveredImage, setHoveredImage] = useState(null);
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -340,7 +344,7 @@ const AboutSection = () => {
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="flex justify-center md:justify-start">
           <Image
-            src="/images/about-image.png"
+            src={hoveredImage || "/images/about-image.png"}
             width={500}
             height={500}
             alt="image"
@@ -395,7 +399,9 @@ const AboutSection = () => {
               {tab === "skills" &&
                 TAB_DATA.find((t) => t.id === tab)?.content[subTab]()}
               {tab !== "skills" &&
-                TAB_DATA.find((t) => t.id === tab)?.content()}
+                TAB_DATA.find((t) => t.id === tab)?.content({
+                  onHover: setHoveredImage,
+                })}
             </ul>
           </div>
         </div>
