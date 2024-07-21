@@ -91,3 +91,13 @@ body {
   font-family: 'YourFontName', sans-serif;
   font-size: 2rem;
 }
+
+.img-border-css {
+  border: .5px solid white;
+  border-radius: .7em;
+  box-shadow: 1px 3px 3px rgba(255, 255, 255, 0.447);
+  -webkit-border-radius: .7em;
+  -moz-border-radius: .7em;
+  -ms-border-radius: .7em;
+  -o-border-radius: .7em;
+}
