@@ -100,4 +100,7 @@ body {
   -moz-border-radius: .7em;
   -ms-border-radius: .7em;
   -o-border-radius: .7em;
+  height: 95%;
+  width: 95%;
+  image-rendering: auto;
 }
