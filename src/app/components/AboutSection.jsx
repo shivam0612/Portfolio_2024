@@ -82,30 +82,27 @@ const AboutSection = () => {
       content: () => (
         <ul className="list-disc pl-2">
           <li>
-            Lambton College
-            <ul>
-              <li>Years Attended: 2022 - 2023</li>
-              <li>
-                Degree: Post Graduate Degree in Computer Software & Database
-                Development
-              </li>
-            </ul>
+            <b>Lambton College</b>
+            <h6 className="font-normal text-sm">
+              Post Graduate Degree in Computer Software & Database Development
+            </h6>
+            <h6 className="font-normal text-sm">2022 - 2023</h6>
           </li>
           <hr className="my-1 animated-hr" />
           <li>
-            Parul University
-            <ul>
-              <li>Years Attended: 2017 - 2020</li>
-              <li>Degree: Bachelor of Computer Science</li>
-            </ul>
+            <b>Parul University</b>
+            <h6 className="font-normal text-sm">
+              Degree: Bachelor of Computer Science
+            </h6>
+            <h6 className="font-normal text-sm">2017 - 2020</h6>
           </li>
           <hr className="my-1 animated-hr" />
           <li>
-            Parul University
-            <ul>
-              <li>Years Attended: 2014 - 2017</li>
-              <li>Degree: Diploma in Computer Science</li>
-            </ul>
+            <b>Parul University</b>
+            <h6 className="font-normal text-sm">
+              Degree: Diploma in Computer Science
+            </h6>
+            <h6 className="font-normal text-sm">2014 - 2017</h6>
           </li>
         </ul>
       ),
@@ -113,20 +110,19 @@ const AboutSection = () => {
     {
       title: "Certifications",
       id: "certifications",
-      content: ({ onHover = () => {} } = {}) => (
+      content: () => (
         <ul className="list-disc pl-2">
           <li
             className="hover:bg-gray-700 cursor-pointer rounded-md p-2"
             style={{ width: "100%" }}
             onMouseEnter={() => {
-              // onHover("/images/AWS_SAA_certificate.png");
               setImageSrc("/images/AWS_SAA_certificate.png");
             }}
             onMouseLeave={() => setImageSrc("/images/about-image.png")}
           >
-            AWS Certified Solution Architect Associate{" "}
+            <b>AWS Certified Solution Architect Associate</b>
             <h6 className="font-normal text-sm">
-              Validity: May 2024 - May 2027
+              Amazon Web Services · May 2024 - May 2027
             </h6>
           </li>
           <hr className="my-1 animated-hr" />
@@ -138,9 +134,24 @@ const AboutSection = () => {
             }}
             onMouseLeave={() => setImageSrc("/images/about-image.png")}
           >
-            AWS Certified Cloud Practitioner
+            <b>AWS Certified Cloud Practitioner</b>
             <h6 className="font-normal text-sm">
-              Validity: March 2024 - March 2027
+              Amazon Web Services · March 2024 - March 2027
+            </h6>
+          </li>
+          <hr className="my-1 animated-hr" />
+
+          <li
+            className="hover:bg-gray-700 cursor-pointer rounded-md p-2"
+            style={{ width: "100%" }}
+            onMouseEnter={() => {
+              setImageSrc("/images/Dhl_ssp.png");
+            }}
+            onMouseLeave={() => setImageSrc("/images/about-image.png")}
+          >
+            <b>Certified Supply Chain Specialist</b>
+            <h6 className="font-normal text-sm">
+              DHL Supply Chain | Matrix Logistics Services · No Expiry
             </h6>
           </li>
         </ul>
