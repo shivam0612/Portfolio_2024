@@ -110,19 +110,21 @@ const TAB_DATA = [
     content: () => (
       <ul className="list-disc pl-2">
         <li
-          className="hover:bg-gray-700 cursor-pointer rounded-md p-2 font-bold text-sm"
+          className="hover:bg-gray-700 cursor-pointer rounded-md p-2"
           style={{ width: "100%" }}
         >
-          AWS Certified Solution Architect Associate{" "}
-          <h6 className="text-sm font-normal">Validity: May 2024 - May 2027</h6>
+          AWS Certified Solution Architect Associate
+          {" "}
+          <h6 className="text-sm font-normal">Amazon Web Services · May 2024 - May 2027</h6>
         </li>
         <hr className="my-1 animated-hr" />
         <li
-          className="hover:bg-gray-700 cursor-pointer rounded-md p-2 font-bold text-sm"
+          className="hover:bg-gray-700 cursor-pointer rounded-md p-2"
           style={{ width: "100%" }}
         >
           AWS Certified Cloud Practitioner
-          <h6 className="text-sm font-normal">Validity: May 2024 - May 2027</h6>
+          <h6 className="text-sm font-normal">Amazon Web Services · March 2024 - March 2027</h6>
+
         </li>
       </ul>
     ),
@@ -153,7 +155,7 @@ const TAB_DATA = [
             );
           }}
         >
-          <li className="text-sm font-normal ">
+          <li className="text-lg font-normal ">
             <b>Case Selector | Cherry Picker | Replenishment</b>
           </li>
           <h6 className="text-sm font-normal">
@@ -185,7 +187,7 @@ const TAB_DATA = [
             );
           }}
         >
-          <li className="text-sm font-normal ">
+          <li className="text-lg font-normal ">
             <b>Sales Associate</b>
           </li>
           <h6 className="text-sm font-normal">Bell · On-Call </h6>
@@ -215,7 +217,7 @@ const TAB_DATA = [
             );
           }}
         >
-          <li className="text-sm font-normal ">
+          <li className="text-lg font-normal ">
             <b>Software Engineer</b>
           </li>
           <h6 className="text-sm font-normal">Lambton College · Internship </h6>
@@ -244,7 +246,7 @@ const TAB_DATA = [
             );
           }}
         >
-          <li className="text-sm font-normal ">
+          <li className="text-lg font-normal ">
             <b>Full Stack Developer</b>
           </li>
           <h6 className="text-sm font-normal">
@@ -275,7 +277,7 @@ const TAB_DATA = [
             );
           }}
         >
-          <li className="text-sm font-normal ">
+          <li className="text-lg font-normal ">
             <b>Web Development Intern</b>
           </li>
           <h6 className="text-sm font-normal">Verzeo · Internship </h6>
@@ -301,7 +303,7 @@ const TAB_DATA = [
             );
           }}
         >
-          <li className="text-sm font-normal ">
+          <li className="text-lg font-normal ">
             <b>Artificial Intelligence Intern</b>
           </li>
           <h6 className="text-sm font-normal">Verzeo · Internship </h6>
@@ -347,7 +349,7 @@ const AboutSection = () => {
         </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col">
           <h2 className="text-4xl font-bold text-white mb-5 mt-10">About Me</h2>
-          <p className="text-base lg:text-sm">
+          <p className="text-base lg:text-lg">
             A Software Engineer and Cloud Engineer with over three years of
             experience in leading project teams, performing code reviews,
             developing testing strategies, and integrating APIs. Highly
